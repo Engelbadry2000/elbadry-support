@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دعم البدري للطاقة الشمسية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <button id="toggleLangBtn" onclick="toggleLanguage()">English</button>
+    <h1 id="title">دعم البدري للطاقة الشمسية</h1>
+    <p id="description">احسب زاوية تثبيت الألواح الشمسية وزاوية تفادي الظلال لأي دولة في العالم</p>
+    
+    <!-- عرض الوقت والتاريخ -->
+    <div id="datetime">
+      <p id="time"></p>
+      <p id="date"></p>
+    </div>
+  </header>
+
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="ابحث عن دولة...">
+    <button id="searchButton">بحث</button>
+  </section>
+  
+
+  <section class="calculator">
+    <label for="countrySelect" id="selectLabel">اختر الدولة:</label>
+    <select id="countrySelect" onchange="calculateSolarAngles()"></select>
+    <div id="result">
+      <p><strong id="latLabel">زاوية خط العرض:</strong> <span id="lat"></span></p>
+      <p><strong id="lngLabel">زاوية خط الطول:</strong> <span id="lng"></span></p>
+      <p><strong id="tiltAngleLabel">زاوية تثبيت الألواح الشمسية:</strong> <span id="tiltAngle"></span>°</p>
+      <p><strong id="avgSunAngleLabel">زاوية تفادي الظلال:</strong> <span id="avgSunAngle"></span>°</p>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footerText">حقوق الطبع والنشر © 2024 دعم البدري للطاقة الشمسية</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
